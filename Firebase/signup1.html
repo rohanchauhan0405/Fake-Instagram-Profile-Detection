@@ -110,37 +110,6 @@
     });
 
 
-// LOGIN FORM 
-
-document.getElementById("Login").addEventListener("submit",function(event){
-    event.preventDefault();
-        var email=document.getElementById("email").value;
-        var password=document.getElementById("password").value;
-        signInWithEmailAndPassword(auth,email,password)
-        .then((userCredential)=>{
-        const user =userCredential.user;
-        console.log(user);
-        alert(user.email+"Login Successfully Done.");
-        document.getElementById('Logout').style.display='block';
-        })
-        .catch((error)=>{
-        const errorCode=error.code;
-        const errorMessage=error.message;
-        console.log(errorMessage);
-        alert(error);
-        });
-    });
     
-    //LOGOUT 
-
-    document.getElementById("Logout").addEventListener("click",function(){
-    signOut(auth).then(()=>{
-    console.log('Sign-Out Successful.');
-    alert('Sign-Out Successful.');
-    document.getElementById('Logout').style.display='none';
-    }).catch((error)=>{
-    console.log('An error happened.');
-    });
-    });
   </script>
 </html>
