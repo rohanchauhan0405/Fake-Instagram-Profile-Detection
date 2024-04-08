@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h2>Welcome to the Dashboard</h2>
+
+    <div id="emailDisplay"></div>
+    <div class="navbar-collapse collapse" >
+        <ul class ="nav navbar-nav navbar-right">
+            <nav>
+            <li><a href="Login.html" id="Logout" style="display: block;">Log Out</a></li>
+        </ul> 
+    </nav>
+    </div>
+
+    <script>
+        // Retrieve email from query parameter
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const email = urlParams.get('email');
+        document.getElementById('emailDisplay').innerText = 'Logged in as: ' + email;
+        document.getElementById('Logout').addEventListener('click', function() {
+            // Perform logout
+            firebase.auth().signOut().then(function() {
+                // Redirect to login page after logout
+                window.location.href ='Login.html';
+            }).catch(function(error) {
+                // Handle errors if any
+                console.error('Logout error:', error);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
