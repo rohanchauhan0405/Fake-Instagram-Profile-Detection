@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
 
-<body>
-    <h2>Welcome to the Dashboard</h2>
-
-    <div id="emailDisplay"></div>
-    <div class="navbar-collapse collapse" >
-        <ul class ="nav navbar-nav navbar-right">
-            <nav>
-            <li><a href="Login.html" id="Logout" style="display: block;">Log Out</a></li>
-        </ul> 
+<body style="background-image: url('/Webpage.jpg');">
+<header>
+    <nav class="navbar">
+        <ul>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="signup1.html" id="Login">Signup</a></li>
+        </ul>
     </nav>
-    </div>
+</header>
+<center>
+    <div id="emailDisplay" class="emailDisplay"></div>
+
+</center>        
+
 
     <script>
         // Retrieve email from query parameter
@@ -25,9 +29,9 @@
         const urlParams = new URLSearchParams(queryString);
         const email = urlParams.get('email');
         document.getElementById('emailDisplay').innerText = 'Logged in as: ' + email;
-        document.getElementById('Logout').addEventListener('click', function() {
+        document.getElementById('Login').addEventListener('click', function() {
             // Perform logout
-            firebase.auth().signOut().then(function() {
+            firebase.auth().Login.then(function() {
                 // Redirect to login page after logout
                 window.location.href ='Login.html';
             }).catch(function(error) {
