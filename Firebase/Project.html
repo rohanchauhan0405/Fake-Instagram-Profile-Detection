@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Social Media Profile Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <nav class="navbar">
+        <ul>
+        <li> <a href="Login.html" onclick="logout()">Logout</a></li>
+        </ul>
+</nav>
+<body>
+    <div class="form-container">
+        <div class="input-wrapper">
+        <h2>Fake Social Media Profile Detection and Reporting</h2>
+        <form action="/submit" method="post">
+            <label for="description_length"><b>Description Length:</b></label>
+            <input type="number" id="description_length" name="Description_length" class="attractive-input" placeholder="Enter description length" required><br>
+
+            <label for="external_url"><b>External URL:</b></label>
+            <select id="external_url" class="attractive-input" name="external_url">
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <label for="private"><b>Private:</b></label>
+            <select id="private" class="attractive-input" name="private">
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <label for="posts"><b>Posts:</b></label>
+            <input type="number" id="posts" name="posts" class="attractive-input" placeholder="Enter number of Post" required><br>
+
+            <label for="followers"><b>Followers:</b></label>
+            <input type="number" id="followers" name="followers" class="attractive-input" placeholder="Enter number of Followers" required><br>
+
+            <label for="follow"><b>Follow:</b></label>
+            <input type="number" id="follow" name="follow" class="attractive-input" placeholder="Enter number of Following" required><br>
+
+            <center><button class="attractive-submit-button"><b>Check</b></button></center>
+        </form>
+        </div>
+    </div>
+    <script>
+        function logout() {
+            alert("Logout successful!");
+        }
+    </script>    
+</body>
+</html>
