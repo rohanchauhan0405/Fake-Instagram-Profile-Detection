@@ -44,13 +44,14 @@ form {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
 }
 
 .input-field {
   position: relative;
   border-bottom: 2px solid #ccc;
   margin: 15px 0;
+  color: #000;
 }
 
 .input-field label {
@@ -58,7 +59,7 @@ h2 {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  color: #fff;
+  color:black;
   font-size: 16px;
   pointer-events: none;
   transition: 0.15s ease;
@@ -71,7 +72,7 @@ h2 {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #fff;
+  color:black;
 }
 
 .input-field input:focus~label,
@@ -86,11 +87,11 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin: 25px 0 35px 0;
-  color: #fff;
+  color: black;
 }
 
 #Save-login {
-  accent-color: #fff;
+  accent-color:black;
 }
 
 .forget label {
@@ -103,7 +104,7 @@ h2 {
 }
 
 .container a {
-  color: #efefef;
+  color: black;
   text-decoration: none;
 }
 
@@ -125,7 +126,7 @@ button {
 }
 
 button:hover {
-  color: #fff;
+  color:bisque;
   border-color: #fff;
   background: rgba(255, 255, 255, 0.15);
 }
@@ -133,5 +134,6 @@ button:hover {
 .Create-account {
   text-align: center;
   margin-top: 30px;
-  color: #fff;
+  color:black;
 }
+
